@@ -3,28 +3,41 @@ import {
     View,
     Text,
     TextInput,
+    Image,
     TouchableOpacity,
 } from 'react-native';
-import { LoginStyle } from '../components/auth/LoginStyle';
+import { RegisStyle } from '../components/auth/RegisStyle';
 
 const Register = ({ navigation, route }) => {
     return (
-        <View style={LoginStyle.body}>
-            <Text style={LoginStyle.title}>Login</Text>
-            <Text style={LoginStyle.descInput}>Username or Email</Text>
-            <TextInput style={LoginStyle.inputLogin} />
-            <Text style={LoginStyle.descInput}>Password</Text>
-            <TextInput style={LoginStyle.inputLogin} />
+        <View style={RegisStyle.body}>
+            <Text style={RegisStyle.title}>Register</Text>
+            <Text style={RegisStyle.descInput}>Username</Text>
+            <TextInput style={RegisStyle.inputLogin} />
+            <Text style={RegisStyle.descInput}>Email</Text>
+            <TextInput style={RegisStyle.inputLogin} />
+            <Text style={RegisStyle.descInput}>Password</Text>
+            <TextInput style={RegisStyle.inputLogin} />
+            <Text style={RegisStyle.descInput}>Confirm Password</Text>
+            <TextInput style={RegisStyle.inputLogin} />
             <TouchableOpacity
-                style={LoginStyle.buttonLogin}>
-                <Text style={LoginStyle.labelButtonLogin}>Login</Text>
+                style={RegisStyle.buttonLogin}>
+                <Text style={RegisStyle.labelButtonLogin}>Register</Text>
             </TouchableOpacity>
-            <TouchableOpacity
-                style={LoginStyle.buttonLoginWithGoogle}>
-                <Text style={LoginStyle.labelButtonLoginWithGoogle}>
-                    Login with Google
+            <TouchableOpacity style={RegisStyle.buttonLoginWithGoogle}>
+                <Image source={require('../assets/logogoogle.png')}
+                    style={RegisStyle.logoBtn} />
+                <Text style={RegisStyle.labelButtonLoginWithGoogle}>
+                    Register with Google
+                </Text>
+            </TouchableOpacity>
+            <Text style={RegisStyle.Login}>
+                Already have account?
+                <Text style={RegisStyle.link}
+                onPress={() => { navigation.navigate('Login'); }}>
+                    Login
+                </Text>
             </Text>
-            </TouchableOpacity>
         </View>
     );
 };

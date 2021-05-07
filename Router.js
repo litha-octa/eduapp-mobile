@@ -9,6 +9,10 @@ import Home from './src/screens/Home';
 import Profile from './src/screens/Profile';
 import Login from './src/screens/Login';
 import Register from './src/screens/Register';
+import InsertEmail from './src/screens/InsertEmail';
+import AccountVer from './src/screens/AccountVer';
+import CreateNewPass from './src/screens/CreateNewPass';
+import PassChanged from './src/screens/PassChanged';
 // import MyHeader from './src/components/MyHeader';
 // import MyBackButton from './src/components/MyBackButton';
 
@@ -33,38 +37,17 @@ const Router = () => {
   const {Navigator, Screen} = createStackNavigator();
   return (
     <NavigationContainer>
-      <Navigator
-        initialRouteName="Home"
-        headerStyle
-        screenOptions={({navigation, route}) => ({
-          headerStyle: {
-            height: 40,
-            backgroundColor: 'pink',
-          },
-          headerTitleAlign: 'center',
-          headerLeft: () => {
-            return (
-              <TouchableOpacity
-                style={{width: 50, backgroundColor: 'pink'}}
-                onPress={() => navigation.goBack()}>
-                <Icon name="doubleleft" size={30} color="#900" />
-              </TouchableOpacity>
-            );
-          },
-          headerRight: () => {
-            return (
-              <TouchableOpacity
-                style={{width: 50, backgroundColor: 'pink'}}
-                onPress={() => navigation.goBack()}>
-                <Icon name="doubleright" size={30} color="#900" />
-              </TouchableOpacity>
-            );
-          },
-        })}>
+      <Navigator>
+        <Screen name="Login" component={Login} />
         <Screen name="Home" component={Home} />
         <Screen name="Profile" component={Profile} />
-        <Screen name="Login" component={Login} />
         <Screen name="Register" component={Register} />
+        <Screen name="InsertEmail" component={InsertEmail} />
+        <Screen name="AccountVer" component={AccountVer} />
+        <Screen name="CreateNewPass" component={CreateNewPass} />
+        <Screen name="PassChanged" component={PassChanged} />
+
+        
       </Navigator>
     </NavigationContainer>
   );

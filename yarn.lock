@@ -5702,7 +5702,7 @@
     "kleur" "^3.0.3"
     "sisteransi" "^1.0.5"
 
-"prop-types@^15.7.2":
+"prop-types@^15.5.9", "prop-types@^15.7.2":
   "integrity" "sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.7.2.tgz"
   "version" "15.7.2"
@@ -5787,10 +5787,25 @@
     "invariant" "^2.2.4"
     "prop-types" "^15.7.2"
 
+"react-native-hide-show-password-input@^1.2.0":
+  "integrity" "sha512-jVYnQ5bXliTI9ayQpOvK9AsB+g7BC+Vkfarze3fBiFSBaluXYaeklxYuHNCx7eMBGgg4VlNyxlryrRqldkRlCw=="
+  "resolved" "https://registry.npmjs.org/react-native-hide-show-password-input/-/react-native-hide-show-password-input-1.2.0.tgz"
+  "version" "1.2.0"
+  dependencies:
+    "prop-types" "^15.7.2"
+    "react-native-material-textfield" "github:vishaljadav24/react-native-material-textfield"
+    "react-native-vector-icons" "^7.1.0"
+
 "react-native-iphone-x-helper@^1.3.0":
   "integrity" "sha512-HOf0jzRnq2/aFUcdCJ9w9JGzN3gdEg0zFE4FyYlp4jtidqU03D5X7ZegGKfT1EWteR0gPBGp9ye5T5FvSWi9Yg=="
   "resolved" "https://registry.npmjs.org/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.3.1.tgz"
   "version" "1.3.1"
+
+"react-native-material-textfield@github:vishaljadav24/react-native-material-textfield":
+  "resolved" "git+ssh://git@github.com/vishaljadav24/react-native-material-textfield.git#e2d155446ab9057fc7bf6251492fe445d47c07c2"
+  "version" "0.16.1"
+  dependencies:
+    "prop-types" "^15.5.9"
 
 "react-native-reanimated@^2.1.0":
   "integrity" "sha512-tlPvvcdf+X7HGQ7g/7npBFhwMznfdk7MHUc9gUB/kp2abSscXNe/kOVKlrNEOO4DS11rNOXc+llFxVFMuNk0zA=="
@@ -5812,6 +5827,20 @@
   "resolved" "https://registry.npmjs.org/react-native-screens/-/react-native-screens-3.1.1.tgz"
   "version" "3.1.1"
 
+"react-native-vector-icons@^7.1.0":
+  "integrity" "sha512-V2a1zJ4i+kS8O4j183gIwX14St9AxxXabxwYpFBgRhvr2NDXyFcjHDEAgrOYYlt2W57e20aN1tBDU/I+wn9WtQ=="
+  "resolved" "https://registry.npmjs.org/react-native-vector-icons/-/react-native-vector-icons-7.1.0.tgz"
+  "version" "7.1.0"
+  dependencies:
+    "lodash.frompairs" "^4.0.1"
+    "lodash.isequal" "^4.5.0"
+    "lodash.isstring" "^4.0.1"
+    "lodash.omit" "^4.5.0"
+    "lodash.pick" "^4.4.0"
+    "lodash.template" "^4.5.0"
+    "prop-types" "^15.7.2"
+    "yargs" "^15.0.2"
+
 "react-native-vector-icons@^8.1.0":
   "integrity" "sha512-sHIdBB6Y0dHaot2fMXgy5J/hhCn5YuyN7SKDNFgPzL8KA1oF2/v7mgYMavnK7LIIs2dJoGnDANKf61dsU+TZlg=="
   "resolved" "https://registry.npmjs.org/react-native-vector-icons/-/react-native-vector-icons-8.1.0.tgz"
@@ -5826,7 +5855,7 @@
     "prop-types" "^15.7.2"
     "yargs" "^16.1.1"
 
-"react-native@*", "react-native@>=0.42.0", "react-native@>=0.57", "react-native@>=0.64.0-rc.0 || 0.0.0-*", "react-native@0.64.0":
+"react-native@*", "react-native@>=0.42.0", "react-native@>=0.55.0", "react-native@>=0.57", "react-native@>=0.64.0-rc.0 || 0.0.0-*", "react-native@0.64.0":
   "integrity" "sha512-8dhSHBthgGwAjU+OjqUEA49229ThPMQH7URH0u8L0xoQFCnZO2sZ9Wc6KcbxI0x9KSmjCMFFZqRe3w3QsRv64g=="
   "resolved" "https://registry.npmjs.org/react-native/-/react-native-0.64.0.tgz"
   "version" "0.64.0"
@@ -5887,7 +5916,7 @@
     "react-shallow-renderer" "^16.13.1"
     "scheduler" "^0.20.1"
 
-"react@*", "react@^16.0.0 || ^17.0.0", "react@^16.8.0 || ^17.0.0", "react@>=16.0", "react@17.0.1":
+"react@*", "react@^16.0.0 || ^17.0.0", "react@^16.8.0 || ^17.0.0", "react@>=16.0", "react@>=16.3.0", "react@17.0.1":
   "integrity" "sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.1.tgz"
   "version" "17.0.1"
@@ -7372,7 +7401,7 @@
   "resolved" "https://registry.npmjs.org/yargs-parser/-/yargs-parser-20.2.7.tgz"
   "version" "20.2.7"
 
-"yargs@^15.1.0", "yargs@^15.3.1", "yargs@^15.4.1":
+"yargs@^15.0.2", "yargs@^15.1.0", "yargs@^15.3.1", "yargs@^15.4.1":
   "integrity" "sha512-aePbxDmcYW++PaqBsJ+HYUFwCdv4LVvdnhBy78E57PIor8/OVvhMrADFFEDh8DHDFRv/O9i3lPhsENjO7QX0+A=="
   "resolved" "https://registry.npmjs.org/yargs/-/yargs-15.4.1.tgz"
   "version" "15.4.1"
