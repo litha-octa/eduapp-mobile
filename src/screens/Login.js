@@ -7,21 +7,66 @@ import {
     TouchableOpacity,
 } from 'react-native';
 import {LoginStyle} from '../components/auth/LoginStyle';
+import axios from 'axios';
 
 const Login = ({ navigation, route }) => {
+   const  state = {
+    name: null,
+    password: null,
+  };
+  nameHandler = (a) => {
+    this.setState({
+      name: a.target.value,
+    });
+  };
+  passwordHandler = (a) => {
+    this.setState({
+      password: a.target.value,
+    });
+  };
+  openModalHandler = () => {
+    this.setState({
+      modalShow: true,
+    });
+  };
+  submitHandler = (a) => {
+    a.preventDefault();
+    let dataLogin = {
+      name: this.state.name,
+      password: this.state.password,
+    };
+
+    axios
+      .post('http://localhost:8300/api/v1/auth/', dataLogin)
+      .then((res) => {
+        if (res.data.success) {
+          res.data.role === 1 ?
+            this.props.history.push('Profile') :
+            this.props.history.push('Profile');
+        }
+      })
+      .catch((err) => {
+        this.setState(
+            console.log("error bangsat")
+        );
+      });
+  };
+
 return(
         <View style={LoginStyle.body}>
             <Text style={LoginStyle.title}>Login</Text>
 
             <Text style={LoginStyle.descInput}>Username or Email</Text>
-                <TextInput style={LoginStyle.inputLogin}/>
-            <Text style={LoginStyle.descInput}>Password</Text>
+                <TextInput style={LoginStyle.inputLogin}  onChange={this.nameHandler}/>
+            <Text style={LoginStyle.descInput} onChange={this.passwordHandler}>Password</Text>
                 <TextInput style={LoginStyle.inputLogin} />
             
                     <Text style={LoginStyle.forgotPass} onPress={()=>{navigation.navigate('InsertEmail');}}>Forgot Password</Text>
         
         <TouchableOpacity
-            style={LoginStyle.buttonLogin}>
+      style={LoginStyle.buttonLogin} onPress={() => {
+        navigation.navigate('Profile');
+      }}>
             <Text style={LoginStyle.labelButtonLogin}>Login</Text>
         </TouchableOpacity>
 
