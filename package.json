@@ -17,6 +17,7 @@
     "link": "^0.1.5",
     "react": "17.0.1",
     "react-native": "^0.64.0",
+    "react-native-bootstrap-styles": "^4.5.0-r",
     "react-native-elements": "^3.4.1",
     "react-native-gesture-handler": "^1.10.3",
     "react-native-hide-show-password-input": "^1.2.0",

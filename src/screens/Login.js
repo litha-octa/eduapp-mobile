@@ -65,7 +65,7 @@ return(
         
         <TouchableOpacity
       style={LoginStyle.buttonLogin} onPress={() => {
-        navigation.navigate('Profile');
+        navigation.navigate('DashStuAllSchedule');
       }}>
             <Text style={LoginStyle.labelButtonLogin}>Login</Text>
         </TouchableOpacity>

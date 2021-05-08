@@ -13,6 +13,7 @@ import InsertEmail from './src/screens/InsertEmail';
 import AccountVer from './src/screens/AccountVer';
 import CreateNewPass from './src/screens/CreateNewPass';
 import PassChanged from './src/screens/PassChanged';
+import DashStuAllSchedule from './src/screens/DashStuAllSchedule';
 // import MyHeader from './src/components/MyHeader';
 // import MyBackButton from './src/components/MyBackButton';
 
@@ -46,6 +47,7 @@ const Router = () => {
         <Screen name="AccountVer" component={AccountVer} />
         <Screen name="CreateNewPass" component={CreateNewPass} />
         <Screen name="PassChanged" component={PassChanged} />
+        <Screen name="DashStuAllSchedule" component={DashStuAllSchedule}/>
 
         
       </Navigator>
